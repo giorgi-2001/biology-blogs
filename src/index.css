@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* variables */
+:root {
+    /* font-wights */
+    --fw-bold: 700;
+    --fw-bolder: 500;
+    --fw-regular: 400;
+
+    /* Colors: */
+    --primary-red: #d34747;
+    --primary-blue: #5651da;
+    --nutral-graish-blue: #4b4d57;
+    --neutral-dark-blue: #020035;
+    --nutral-light-blue: #cad7ff;
+}
+
+/* utility classes */
+
+.wrapper {
+    width: 100%;
+    max-width: 1110px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: var(--fw-bolder);
+    transition: 0.2s;
+}
+
+.button:is(:hover, :focus-visible, :active) {
+    background-color: white;
+    color: var(--primary-blue);
+    transition: 0.2s;
+}
+
+
+/* general styles */
+
+body {
+    font-size: 18px;
+}
+
+p, span, a {
+    color: var(--nutral-graish-blue);
+}
+
+h1 {
+    color: var(--primary-red);
+    font-size: 2rem;
+    font-weight: var(--fw-bold)
+}
+
+h2, h3, h4 {
+    color: var(--neutral-dark-blue);
+    font-weight: var(--fw-bolder)
+}
+
+a {
+    text-decoration: none;
+    font-weight: var(--fw-bolder);
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: var(--primary-red);
+}
+
+
+/* header styles */
+
+.header {
+    padding-block: 1.5rem;
+    border-bottom: 3px solid var(--primary-red);
+    margin-bottom: 3rem;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding-inline: 2rem;
+}
+
+.header__nav h1 {
+    margin-right: auto;
+}
+
+.blog-card {
+    padding: 1.5rem;
+    background-color: var(--nutral-light-blue);
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.blog-card__button {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+}
+
+/* blog-details */
+
+.blog-content {
+    margin-block: 2rem;
+}
+
+.blog-author {
+    margin-top: 1rem;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4rem;
+}
+
+.delete {
+    display: block;
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+}
+
+.delete:hover {
+    color: var(--primary-red);
+}
